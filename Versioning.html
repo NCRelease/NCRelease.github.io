@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<div class="nav">
+<a href=index.html>Home</a>
+<a href=Versioning.html>Versioning</a>
+<a href=Compatibility.html>Compatibility</a>
+<a href=release.html>Latest Release</a>
+<a href=beta.html>Latest Beta</a>
+</div>
+
+<div class="content">
+<h1>Versioning</h1>
+<p>
+The version numbering scheme for netClé has been somewhat confusing and chaotic in the past.  
+Different and unrelated version numbers were used for the release number, the configuration software and the hub firmware.
+</p>
+
+<p>
+As of the latest release (Version 2.04 - August 22, 2020) this is changing.  This release consists of
+the following components:
+</p>
+<ul>
+<li>Hub firmware for the Gen-1 hub (Version 1.04)</li>
+<li>Hub firmware for the Gen-2 hub (Version 2.04)</li>
+<li>The Java configuration utility (Version 1.04)</li>
+</ul>
+<p>
+The version number for the configuration software and the Gen-1 firmware both start with '1'.  The version number for the release as a whole and for the Gen-2 firmware both start with '2'.  The numbers after the dot (the minor version number) are the same for all components.
+</p>
+<p>
+This will be true in the future.  All components released together will have the same minor version number.  If the software components you are using (hub firmware and configuration software)
+have the same minor version number 
+then you will be able to use all of the features of that release.  Other combinations are possible but may not provide full functionality. See the <a href="Compatibility.html">compatibility page</a> for details.
+</p>
+
+<h2>Beta Versions</h2>
+<p>
+From time to time beta versions of new software will be released, for testing and comment by 
+team members.  All beta version numbers will end with a 'b' followed by a build number.
+(Note: prior to release 2.04 there was no build number.)
+</p>
+
+<p>
+As with releases, the minor version number will change whenever there is a change which would affect 
+the communication between the configuration utility and the hub.  If the change is an isolated bug fix,
+or a user interface change for the configuration the minor version number will not change - but the
+build number <i>for the changed component</i> will be incremented.
+</p>
+
+<h2>Summary</h2>
+<p>
+The format of a version number is &ltmajor number&gt.&ltminor number&gtb&ltbeta-build number&gt
+</p>
+<ul><li>
+For the moment the major number for the configuration software and for Gen-1 firmware is '1'.
+The major number for Gen-2 firmware is '2'. 
+</li>
+<li>
+Components which are fully compatible with each other will have the same minor version
+number. This will match the minor version number for the release.
+</li>
+<li>
+The 'b' and build number are used for beta releases only.  The build number will be incremented
+with each change to a component.  Since components may be updated individually (there will often
+be changes to the configuration software without any changes to firmware) the build numbers
+for corresponding components will not necessarily match.  You can always visit the 
+<a href="beta.html">Latest Beta</a> page to see if you have the most recent stuff.
+</li>
+</ul> 
+</div>
+</body>
+</html>

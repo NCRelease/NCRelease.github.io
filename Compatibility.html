@@ -4,9 +4,62 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<div class="nav">
+<a href=index.html>Home</a>
+<a href=Versioning.html>Versioning</a>
+<a href=Compatibility.html>Compatibility</a>
+<a href=release.html>Latest Release</a>
+<a href=beta.html>Latest Beta</a>
+</div>
+
+<div class="content">
+
 <h1>Compatibility</h1>
-<p>
-Everything works with everything!
-</p>
+<h2>In General</h2>
+<p>In general, things you would expect to work, do work.</p>
+
+<p>The latest configuration utility works with both the gen-1 hub and the gen-2 hub.</p>
+
+<p>The configuration utility reads the hub's version information when it starts up and 
+adjusts its behaviour appropriately.  This means that the latest configuration software 
+is able to work with older versions of hub firmware.  For example a version 1.04 configuration utility can be used to configure a version 1.02 hub.</p>
+
+<p>Configuration files saved with the <i>Export</i> function can be used to configure both gen-1 and gen-2 hubs of the same version.  This means you can develop a configuration using a gen-2 hub and then install that configuration on a client's gen-1 hub and it will work.  See below for caviates if the hubs are not part of the same release.</p>
+
+<h2>Types of Change</h2>
+<p>Compatibility between different software versions depends on the types of things 
+that were changed from one version to the next.  There are two main categories of changes.</p>
+
+<h3>Configuration Utility Improvements</h3>
+<p>The majority of changes at this stage in the project are those aimed at making the configuration utility more powerful or easier to use.  These changes have no impact on the functionality of the hub and therefore do
+not affect the format or content of the configuration files.  The changes are to the
+configuration utility only.</p>
+
+<p>There are no compatibility issues with this type of change.</p>
+
+<h3>Hub Functionality Improvements</h3>
+<p> Occasionally there will be changes to the capabilities of the hub itself.  This could be enhancements to an existing peripheral (e.g. the ability to turn on and off individual lights on the light box) or a new I2C device.</p>
+
+<p>These changes require changes to the hub software and new content for the configuration files.  
+As a result these changes do create compatibility issues.</p> 
+
+<h2>What Doesn't Work</h2>
+<h3>To get the latest your need all the latest</h3>
+<p>If a new hub capability has been developed you will need the latest hub firmware <i>and</i>
+the latest configuration software in order to access the new feature.</p>
+
+<h3>Old configuration utility with new hub software</h3>
+<p>The configuration utility will adapt itself to work with older version of the hub firmware.
+Obviously it cannot adapt itself to firmware versions that were unknown at the time of its release.
+As a result old configuration software should not be used with newer hub firmware.</p>
+
+<h3>New configuration options on old hub firmware</h3>
+<p>You can create configuration files using newer software and then load them on older versions of the hub firmware <i>as long as</i> you are not using any new features that are unique to the newer software.  If you use configuration options which were unknown when the older hub firmware was 
+produced your configuration will not work on an old hub and may not even load.</p>
+
+<h3>Mixing netClé releases with old Sensact releases</h3>
+ <p>There is no compability between netClé software versions and old software from the 
+ Sensact project.</p>
+</div>
 </body>
 </html>
