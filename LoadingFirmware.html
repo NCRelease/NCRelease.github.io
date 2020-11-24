@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<div class="nav">
+<a href=index.html>Home</a>
+<a href=Versioning.html>Versioning</a>
+<a href=Compatibility.html>Compatibility</a>
+<a href=LoadingFirmware.html>Loading Firmware</a>
+<a href=release.html>Latest Release</a>
+<a href=beta.html>Latest Beta</a>
+</div>
+
+<div class="content">
+<h1>Loading Firmware</h1>
+<p>
+To load or upgrade the firmware on the hub you will need the Arduino IDE program. 
+This is a free application.  The Windows version is available at 
+<a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a>. 
+There is lots of infomation on using the IDE on the web.
+</p>
+<p>
+After installing the Arduino IDE you will need to add the IRLib2 library to your installation.  Download the following zip file, open it, and follow the instructions in the readme.md file.
+</p>
+<div>
+<a class="download" href="IRLib2-master.zip" download>IRLib2-master.zip</a>
+</div>
+<p>
+Using the Arduino IDE, open the hub '.ino' file (either HubV1.ino or HubV2.ino).
+</p>
+<p>
+Under the "Tools" menu, go to the "Board" sub-menu and select "Arduino Leonardo".
+</p>
+<p>
+Connect your hub to your PC's USB port.  Then open the IDE's serial monitor ("Tools" > "Serial Monitor") and enter a capital 'V'.  If there is already netCle firmware running on the hub it will respond with the version number preceeded by 'V' and followed by 'Z' (e.g. 'V2.04Z').  This step
+puts the hub into IDLE mode.  In this mode the hub will not interfere with the download of new firmware.
+</p>
+<p>
+Finally, you can click on the "Upload" button (2nd from the left) to load the new firmware.
+</p>
+</div>
+</body>
+</html>
